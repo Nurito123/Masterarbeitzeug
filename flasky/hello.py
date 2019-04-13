@@ -20,7 +20,7 @@ query1 = open('./SQL/patientselection.sql', 'r')
 
 sqlquery1 = s = "".join(query1.readlines())
 
-cnxn =pyodbc.connect('DSN=svm-db-stois1-odbc; UID=CrystalReportsUser; PWD=impac01')
+cnxn =pyodbc.connect(server;user; password)
 
 data1 = pd.read_sql_query(sqlquery1, cnxn)
 
@@ -117,7 +117,7 @@ def fraction():
     #     name = form1.name.data
     #     form.name.data = ''
     data = query_mosaiq_fraction()
-    return render_template('fraction.html',tables=[data.to_html(classes='table table-striped table-sm')], titles=data.columns.values)
+    return render_template('fraction.html' ''' form = 'form', name = 'name', ''' ,tables=[data.to_html(classes='table table-striped table-sm')], titles=data.columns.values)
 
 @app.route('/startrx', methods=("POST", "GET"))
 def startrx():
