@@ -12,6 +12,7 @@ Meine Probleme:
   - ich brauche einen Daterangepicker, der die gewählten Daten in die SQL-Query schreibt
   - ich brauche für die anderen SQL-Parameter ein WebForm mit Userinput einmal int, einmal str.
   - und bei jeder Seite einen Link "download csv" der eine Funktion aufruft, die das df per csv runterlädt
+  - Unter der Navbar sollten die Usereingaben erfolgen
   
  
 Ich hab keine Lösung wie ich mit einem Link oder Button Click Funktionen aufrufe -> df/csv download starte
@@ -29,4 +30,6 @@ Ich hab keine Lösung wie ich mit einem Link oder Button Click Funktionen aufruf
 wenn der dieser oder ähnliche Lösungen eifach zu implementieren sind wäre das auch gut aber nicht primär wichtig http://www.daterangepicker.com/
 
 Funktion über Erscheinungsbild)
+
+Die Datei flasky.jpg ist ein Screenshot wie es gerade aussieht.
 
