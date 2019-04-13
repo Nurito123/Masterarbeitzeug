@@ -1,11 +1,31 @@
 Flasky
 ======
 
-This repository contains the source code examples for the second edition of my O'Reilly book [Flask Web Development](http://www.flaskbook.com).
+- Rein lesender Zugriff zur DB
+- Security vorerst egal, da nur Prototyp, designierte Rechenr im Intranet (mit Internet ->javascript Stuff)
 
-The commits and tags in this repository were carefully created to match the sequence in which concepts are presented in the book. Please read the section titled "How to Work with the Example Code" in the book's preface for instructions.
+Python pandas macht die SQL-Abfrage mit "?" Parametern, die Pandas-Funktion https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.DataFrame.to_html.html schreibt mir direkt die table.
 
-For Readers of the First Edition of the Book
---------------------------------------------
+Ähnlich gibt es dazu DataFrame.to_csv
 
-The code examples for the first edition of the book were moved to a different repository: [https://github.com/miguelgrinberg/flasky-first-edition](https://github.com/miguelgrinberg/flasky-first-edition).
+Meine Probleme:
+  - ich brauche einen Daterangepicker, der die gewählten Daten in die SQL-Query schreibt
+  - ich brauche für die anderen SQL-Parameter ein WebForm mit Userinput einmal int, einmal str.
+  - und bei jeder Seite einen Link "download csv" der eine Funktion aufruft, die das df per csv runterlädt
+  
+ 
+Ich hab keine Lösung wie ich mit einem Link oder Button Click Funktionen aufrufe -> df/csv download starte
+ 
+ Meine Programmstrukturierung ist sicher fragwürdig :-)
+ 
+ Durchreichen der Usereingaben zu den SQL-Parametern
+ 
+ Und Implementierung eines Daterangepickers 
+  
+  
+  
+(sekundär relevant: die DataFrame-to_html macht hässliche stylesheets, als Option kann der hübschere table styles mitgeben aber das funktioneirt nicht
+
+wenn der dieser oder ähnliche Lösungen eifach zu implementieren sind wäre das auch gut aber nicht primär wichtig http://www.daterangepicker.com/
+
+Funktion über Erscheinungsbild)
