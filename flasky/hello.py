@@ -101,14 +101,14 @@ def appointements():
 def schedule():
     data = query_mosaiq_schedule()
     form1 = MyForm()
-    def output_dataframe_csv():
-        output = StringIO.StringIO()
-        data.to_csv(output)
-        return Response(output.getvalue(), mimetype="text/csv")
     return render_template('schedule.html',  tables=[data.to_html(classes='table table-striped table-sm')], titles=data.columns.values, form=form1)
 
 @app.route('/schedule/csv')
-
+def schedule_csv()
+    data = query_mosaiq_schedule()
+    output = StringIO.StringIO()
+    data.to_csv(output)
+    return Response(output.getvalue(), mimetype="text/csv")
 
 @app.route('/fraction', methods=("POST", "GET"))
 def fraction():
