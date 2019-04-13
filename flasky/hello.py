@@ -83,6 +83,8 @@ app.secret_key = 'SHH!'
 
 class MyForm(FlaskForm):
     date = DateField(id='datepick')
+    name = StringField('Patient ID?', validators=[DataRequired()])
+    submit = SubmitField('Submit')
 
 class NameForm(FlaskForm):
     name = StringField('Patient ID?', validators=[DataRequired()])
@@ -100,15 +102,19 @@ def appointements():
 @app.route('/schedule', methods=("POST", "GET"))
 def schedule():
     data = query_mosaiq_schedule()
-    form1 = MyForm()
-    def output_dataframe_csv():
-        output = StringIO.StringIO()
-        data.to_csv(output)
-        return Response(output.getvalue(), mimetype="text/csv")
+    form1 = MyForm(request.form)
+    if request.method == 'POST' and form1.validate():
+        date = form1.date.data
+        name = form1.name.data
+        print("Hier die daten in die sql anfrage stecken")
     return render_template('schedule.html',  tables=[data.to_html(classes='table table-striped table-sm')], titles=data.columns.values, form=form1)
 
 @app.route('/schedule/csv')
-
+def schedule_csv()
+    data = query_mosaiq_schedule()
+    output = StringIO.StringIO()
+    data.to_csv(output)
+    return Response(output.getvalue(), mimetype="text/csv")
 
 @app.route('/fraction', methods=("POST", "GET"))
 def fraction():
