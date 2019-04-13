@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+
+
+<div class="container">
+  <div>
+      <table>
+        <tbody>
+          {% for table in tables %}
+                      {{titles[loop.index]}}
+                      {{ table|safe }}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</div>
+{% endblock %}
