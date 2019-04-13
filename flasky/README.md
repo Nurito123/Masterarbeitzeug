@@ -29,3 +29,4 @@ Ich hab keine Lösung wie ich mit einem Link oder Button Click Funktionen aufruf
 wenn der dieser oder ähnliche Lösungen eifach zu implementieren sind wäre das auch gut aber nicht primär wichtig http://www.daterangepicker.com/
 
 Funktion über Erscheinungsbild)
+
